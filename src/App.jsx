@@ -9,6 +9,7 @@ import Settings from './pages/Settings';
 import Write from './pages/Write';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Posts from './components/Posts';
+import About from './pages/About';
 
 const App = () => {
   const user = false;
@@ -39,6 +40,11 @@ const App = () => {
             path="/settings"
             exact
             element={user ? <Settings /> : <Login />}
+          ></Route>
+          <Route
+            path="/about"
+            exact
+            element={<About />}
           ></Route>
         </Routes>
         <Footer />
