@@ -4,6 +4,7 @@ import Single from './components/Single';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Footer from './components/Footer';
 import Settings from './pages/Settings';
 import Write from './pages/Write';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -40,6 +41,7 @@ const App = () => {
             element={user ? <Settings /> : <Login />}
           ></Route>
         </Routes>
+        <Footer />
       </Router>
     </>
   );

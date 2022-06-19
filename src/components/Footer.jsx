@@ -1,127 +1,45 @@
-import React from 'react';
-import { MDBFooter } from 'mdb-react-ui-kit';
+import React from "react";
+import ItemsContainer from "./ItemsContainer";
+import SocialIcons from "./SocialIcons";
+import { Icons } from "./Menus";
 
-export default function App() {
+const Footer = () => {
   return (
-    <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
-      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <div className="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
-
+    <footer className="bg-gray-900 text-white">
+      <div style={{display: 'none'}} className=" md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-7">
+        <h1
+          className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold
+         md:w-2/5"
+        >
+          <span className="text-teal-400">Free</span> until you're ready to
+          launch
+        </h1>
         <div>
-          <a href="" className="me-4 text-reset">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="" className="me-4 text-reset">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="" className="me-4 text-reset">
-            <i className="fab fa-google"></i>
-          </a>
-          <a href="" className="me-4 text-reset">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="" className="me-4 text-reset">
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="" className="me-4 text-reset">
-            <i className="fab fa-github"></i>
-          </a>
+          <input
+            type="text"
+            placeholder="Enter Your ph.no"
+            className="text-gray-800
+           sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2 focus:outline-none"
+          />
+          <button
+            className="bg-teal-400 hover:bg-teal-500 duration-300 px-5 py-2.5 font-[Poppins]
+           rounded-md text-white md:w-auto w-full"
+          >
+            Request Code
+          </button>
         </div>
-      </section>
-
-      <section className="">
-        <div className="container text-center text-md-start mt-5">
-          <div className="row mt-3">
-            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">
-                <i className="fas fa-gem me-3"></i>Company name
-              </h6>
-              <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
-            </div>
-
-            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-              <p>
-                <a href="#!" className="text-reset">
-                  Angular
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  React
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Vue
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Laravel
-                </a>
-              </p>
-            </div>
-
-            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-              <p>
-                <a href="#!" className="text-reset">
-                  Pricing
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Help
-                </a>
-              </p>
-            </div>
-
-            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-              <p>
-                <i className="fas fa-home me-3"></i> New York, NY 10012, US
-              </p>
-              <p>
-                <i className="fas fa-envelope me-3"></i>
-                info@example.com
-              </p>
-              <p>
-                <i className="fas fa-phone me-3"></i> + 01 234 567 88
-              </p>
-              <p>
-                <i className="fas fa-print me-3"></i> + 01 234 567 89
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div
-        className="text-center p-4"
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
-      >
-        © 2021 Copyright:
-        <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-          MDBootstrap.com
-        </a>
       </div>
-    </MDBFooter>
+      <ItemsContainer />
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
+      text-center pt-2 text-gray-400 text-sm pb-8"
+      >
+        <span>© 2022 TheWizards. All rights reserved.</span>
+        <span>Terms · Privacy Policy</span>
+        <SocialIcons Icons={Icons} />
+      </div>
+    </footer>
   );
-}
+};
+
+export default Footer;
