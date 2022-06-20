@@ -9,7 +9,12 @@ const Navbar = () => {
       style={{ zIndex: 999 }}
       className="container mx-auto flex justify-between items-center h-15 sticky"
     >
-      <div className="text-3xl italic font-bold text-blue-900">SmartWORDS.</div>
+      <Link to="/">
+        <div className="text-3xl italic font-bold text-blue-900">
+          SmartWORDS.
+        </div>
+      </Link>
+
       <ul className="flex">
         <li className="p-4">
           <Link to="/">HOME</Link>

@@ -8,7 +8,7 @@ const Header = () => {
         <span className="absolute top-1/5 text-[100px]">Blog</span>
       </div>
       <img
-        src="https://images.pexels.com/photos/1167355/pexels-photo-1167355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        src="https://img.freepik.com/free-photo/woman-works-office-blue-background-concept-workspace-working-computer-freelance-banner_164357-1144.jpg?w=2000"
         className="headerImage w-full h-[450px] mt-[80px] object-cover"
         alt="titleimg"
       />

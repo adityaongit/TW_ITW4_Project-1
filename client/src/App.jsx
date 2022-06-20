@@ -10,6 +10,7 @@ import Write from './pages/Write';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Posts from './components/Posts';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 const App = () => {
   const user = false;
@@ -41,11 +42,8 @@ const App = () => {
             exact
             element={user ? <Settings /> : <Login />}
           ></Route>
-          <Route
-            path="/about"
-            exact
-            element={<About />}
-          ></Route>
+          <Route path="/about" exact element={<About />}></Route>
+          <Route path="/contact" exact element={<Contact />}></Route>
         </Routes>
         <Footer />
       </Router>
