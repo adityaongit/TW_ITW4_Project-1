@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div
-      style={{ height: 'calc(100vh - 50px)' }}
-      className="login bg-cover flex flex-col items-center justify-center bg-gradient-to-r from-teal-500 to-blue-500 "
+      style={{
+        height: 'calc(100vh - 50px)',
+        backgroundImage: `url("https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")`,
+      }}
+      className="login bg-cover flex flex-col items-center justify-center"
     >
       <span className="loginTitle text-5xl ">Login</span>
       <form className="loginForm flex flex-col mt-5">

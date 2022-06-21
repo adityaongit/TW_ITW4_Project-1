@@ -27,8 +27,11 @@ const Register = () => {
 
   return (
     <div
-      style={{ height: 'calc(100vh - 50px)' }}
-      className="register bg-cover flex flex-col items-center justify-center bg-gradient-to-r from-teal-500 to-blue-500 "
+      style={{
+        height: 'calc(100vh - 50px)',
+        backgroundImage: `url("https://images.unsplash.com/photo-1517524615358-1a73bc3fcf51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,
+      }}
+      className="register bg-cover flex flex-col items-center justify-center"
     >
       <span className="registerTitle text-5xl ">Register</span>
       <form className="registerForm flex flex-col mt-5" onSubmit={handleSubmit}>
