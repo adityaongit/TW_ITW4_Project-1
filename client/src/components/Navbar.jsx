@@ -10,13 +10,13 @@ const Navbar = () => {
       className="container mx-auto flex justify-between items-center h-15 sticky"
     >
       <Link to="/">
-        <div className="text-3xl italic font-bold text-blue-900">
+        <div className="text-3xl italic font-bold text-blue-900 font-smart ">
           SmartWORDS.
         </div>
       </Link>
 
-      <ul className="flex">
-        <li className="p-4">
+      <ul className="flex font-title">
+        <li style={{}} className="m-3 bg-gray-300 rounded-xl p-1 ">
           <Link to="/">HOME</Link>
         </li>
         <li className="p-4">
@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link to="/">{user && 'LOGOUT'}</Link>
         </li>
       </ul>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center font-title">
         {user ? (
           <Link to="/settings">
             <img
