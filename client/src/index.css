@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;600&family=Carter+One&family=Comfortaa&family=Permanent+Marker&family=Poppins:ital,wght@1,500&family=Roboto:wght@300;400&display=swap');
+@import url('//db.onlinewebfonts.com/c/ab89afb3d4431982e93f981d37ad50d0?family=CoconPro-Regular');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

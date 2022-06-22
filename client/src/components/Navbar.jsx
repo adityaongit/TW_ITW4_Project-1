@@ -10,7 +10,7 @@ const Navbar = () => {
       className="container mx-auto flex justify-between items-center h-15 sticky"
     >
       <Link to="/">
-        <div className="text-3xl italic font-bold text-blue-900 font-smart ">
+        <div className="text-3xl font-bold text-blue-900 font-smart ">
           SmartWORDS.
         </div>
       </Link>

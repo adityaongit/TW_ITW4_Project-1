@@ -7,7 +7,7 @@ module.exports = {
       body: ["'Baloo Bhai 2'"],
       title: ["'Roboto'"],
       header: ["'Comfortaa'"],
-      smart: ['Poppins'],
+      smart: ['CoconPro-Regular'],
     },
   },
   plugins: [],
