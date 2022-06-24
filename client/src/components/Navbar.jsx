@@ -15,20 +15,23 @@ const Navbar = () => {
         </div>
       </Link>
 
-      <ul className="flex font-title">
-        <li style={{}} className="m-3 bg-gray-300 rounded-xl p-1 ">
+      <ul className="flex font-title justify-center items-center">
+        <li
+          aria-current="page"
+          className="pl-20 p-4 hover:text-gray-500 hover:text-lg  "
+        >
           <Link to="/">HOME</Link>
         </li>
-        <li className="p-4">
+        <li className="p-4 hover:text-gray-500 hover:text-lg">
           <Link to="/about">ABOUT</Link>
         </li>
-        <li className="p-4">
+        <li className="p-4 hover:text-gray-500 hover:text-lg">
           <Link to="/contact">CONTACT</Link>
         </li>
-        <li className="p-4">
+        <li className="p-4 hover:text-gray-500 hover:text-lg">
           <Link to="/write">WRITE</Link>
         </li>
-        <li className="p-4">
+        <li className="p-4 hover:text-gray-500 hover:text-lg">
           <Link to="/">{user && 'LOGOUT'}</Link>
         </li>
       </ul>
@@ -43,12 +46,12 @@ const Navbar = () => {
           </Link>
         ) : (
           <ul className="topList flex justify-center m-0 p-0 list-none">
-            <li className="topListItem m-5 cursor-pointer">
+            <li className="topListItem m-5 cursor-pointer hover:text-gray-500">
               <Link className="link" to="/login">
                 LOGIN
               </Link>
             </li>
-            <li className="topListItem m-5 cursor-pointer">
+            <li className="topListItem m-5 cursor-pointer hover:text-gray-500">
               <Link className="link" to="/register">
                 REGISTER
               </Link>
