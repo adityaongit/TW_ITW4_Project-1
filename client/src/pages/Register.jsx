@@ -8,17 +8,25 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post('/auth/register', {
+      console.log(username);
+      const res = await axios.post('http://localhost:5000/register', {
         username,
         email,
         password,
-      });
-      console.log(res);
+      },
+      // {"Access-Control-Allow-Origin": "http://localhost:3000",
+      // "Access-Control-Allow-Methods": "POST",
+      // "Access-Control-Max-Age": 86400,
+      // "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      // 'Access-Control-Allow-Credentials': 'true'}
+      );
+      
       res.data && window.location.replace('/login');
     } catch (err) {
       setError(true);
