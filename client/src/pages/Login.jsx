@@ -1,7 +1,40 @@
-import React from 'react';
+import axios from 'axios';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
+  
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(false);
+    try {
+      // console.log(email);
+      const res = await axios.post('http://localhost:5000/login', {
+        email,
+        password,
+      },
+      // {"Access-Control-Allow-Origin": "http://localhost:3000",
+      // "Access-Control-Allow-Methods": "POST",
+      // "Access-Control-Max-Age": 86400,
+      // "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      // 'Access-Control-Allow-Credentials': 'true'}
+      );
+      if(res.data.user){
+        res.data && window.location.replace('/');
+      }
+      else{
+        alert(res.data.message);
+      }
+    } catch (err) {
+      setError(true);
+    }
+  };
+
   return (
     <div
       style={{
@@ -11,20 +44,20 @@ const Login = () => {
       className="login bg-cover flex flex-col items-center justify-center"
     >
       <span className="loginTitle text-5xl ">Login</span>
-      <form className="loginForm flex flex-col mt-5">
+      <form onSubmit={handleSubmit} className="loginForm flex flex-col mt-5">
         <label className="mt-2.5 mb-2.5 ml-0 mr-0">Email</label>
-        <input
+        <input onChange={(e) => setEmail(e.target.value)}
           className="loginInput p-3 bg-white border-none rounded-xl focus:outline-none"
           type="text"
           placeholder="Enter your email..."
         />
         <label className="mt-2.5 mb-2.5 ml-0 mr-0">Password</label>
-        <input
+        <input onChange={(e) => setPassword(e.target.value)}
           className="loginInput p-3 bg-white border-none rounded-xl focus:outline-none"
           type="password"
           placeholder="Enter your password..."
         />
-        <button className="loginButton mt-5 cursor-pointer bg-blue-900 text-white p-3 border-none rounded-xl text-center ">
+        <button type='submit' className="loginButton mt-5 cursor-pointer bg-blue-900 text-white p-3 border-none rounded-xl text-center ">
           Login
         </button>
       </form>
